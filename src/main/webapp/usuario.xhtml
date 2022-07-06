@@ -6,39 +6,26 @@
                 template="/WEB-INF/templates/layout.xhtml">
 
     <ui:define name="content">
-        <!--<h1 class="aw-page-title">Título da sua página</h1>-->
+        <p:panel header="Usuário">
 
-        <p:panel id="painel_conteudo" header="Usuário" >
-<!--            <p:tabView id="tab_view" activeIndex="">-->
-                
-                <!--aba para cadastrar e alterar-->
-<!--                <p:tab title="Editar">-->
-                    <h:form id="form_novo">
-                        
-                        <p:panelGrid columns="4" layout="flex"
-                                     columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-10"
-                                     contentStyleClass="ui-fluid">
-                            
-                            <p:outputLabel for="nome" value="Usuário:" />
-                            <p:inputText id="nome" value="#{usuarioC.usuario.login}" 
-                                         required="false" requiredMessage="Usuário é obrigatório!"/>
-                            
-<!--                            <p:outputLabel for="email" value="E-mail:" />
-                            <p:inputText id="email" value="#{usuarioC.usuario.email}" 
-                                         required="true" requiredMessage="E-mail é obrigatório!"/>-->
-                            
-<!--                            <p:outputLabel for="senha" value="Senha:" />
-                            <p:password id="senha" value="#{usuarioC.usuario.senha}" 
-                                         required="false" requiredMessage="Senha é obrigatório!"/>-->
+            <p:card style="width: 20em; padding: 12px;">
 
-                        </p:panelGrid>
-<!--                         <p:commandButton value="Salvar" action="#{usuarioC.salvar()}"  update="@all" />-->
-                        
-                    </h:form>
-<!--                </p:tab>
+                <f:facet name="header">
+                    <img alt="user header" src="#{googleC.urlImagem}" style="max-width: 12em"/>
+                </f:facet>
 
-            </p:tabView>-->
-        </p:panel> 
+                <p>
+                    <div><small><h:outputText value="Nome" /></small></div>
+                    <b><h:outputText value="#{googleC.nome}"/></b>
+                </p>
+                <p>
+                    <div><small><h:outputText value="Email" /></small></div>
+                    <b><h:outputText value="#{googleC.email}"/></b>
+                </p>
+
+            </p:card>
+
+        </p:panel>
     </ui:define>
 
 </ui:composition>
