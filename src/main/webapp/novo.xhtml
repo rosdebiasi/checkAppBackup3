@@ -15,10 +15,10 @@
             <!--aba para cadastrar e alterar-->
             <!--                <p:tab title="Novo">-->
             <h:form id="form_novo">
-                
-<!--                barra fica em cima do primeiro -afff e fica os dois :/ -->
-<!--                <p:growl id="growl" showDetail="true" />
-                <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />-->
+
+                <!--                barra fica em cima do primeiro -afff e fica os dois :/ -->
+                <!--                <p:growl id="growl" showDetail="true" />
+                                <p:growl id="growl-sticky" for="sticky-key" showDetail="true" sticky="true" />-->
 
                 <p:panelGrid columns="4" layout="flex"
                              columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-10"
@@ -34,9 +34,7 @@
                         <f:selectItems value="#{inspecaoC.comboEmpreendimentos}"/>
                     </p:selectOneMenu>
 
-                    <p:outputLabel for="responsavel" value="Responsável técnico:" />
-                    <p:inputText id="responsavel" value="#{inspecaoC.inspecao.responsavelTecnico}"
-                                 required="true" requiredMessage="Responsável técnico é obrigatório!" />
+                    <h:outputText value="Responsável técnico: #{googleC.nome} "/>
 
                     <p:accordionPanel value="#{inspecaoC.listaAvaliacoesPorCategoria.keySet()}" var="nomeCategoria">
                         <p:tab title="#{nomeCategoria}">
