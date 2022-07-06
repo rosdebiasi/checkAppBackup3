@@ -282,7 +282,8 @@ public class InspecaoControle implements Serializable {
     public void setListaAvaliacoesPorCategoria(Map<String, List<Avaliacao>> listaAvaliacoesPorCategoria) {
         this.listaAvaliacoesPorCategoria = listaAvaliacoesPorCategoria;
     }
-
+    
+}
 //comentados  
 //    public void excluir() {
 //        try {
