@@ -70,13 +70,11 @@ public class EmpreendimentoControle implements Serializable {
     public void salvar() {
         try {
             localRepositorio.save(lugar);
-            //GrowlView.showInfo();
             Mensagem.mensagemSucesso(lugar.getNome());
             lugar = null;
             modelLugares = null;
             aba = 0;
         } catch (Exception e) {
-            //GrowlView.showError();
             Mensagem.mensagemErro(lugar.getNome());
         }
     }
@@ -85,13 +83,11 @@ public class EmpreendimentoControle implements Serializable {
         try {
             lugar = modelLugares.getRowData();
             localRepositorio.delete(lugar);
-            GrowlView.showInfo();
             Mensagem.mensagemSucessoExcluir(lugar.getNome());
             lugar = null;
             modelLugares = null;
         } catch (Exception e) {
-            GrowlView.showError();
-            //Mensagem.mensagemErroExcluir(lugar.getNome());
+            Mensagem.mensagemErroExcluir(lugar.getNome());
         }
     }
 

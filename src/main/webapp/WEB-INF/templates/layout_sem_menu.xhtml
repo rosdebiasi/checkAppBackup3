@@ -25,102 +25,15 @@
 
     <h:body>
 
-        <header class="aw-topbar" style="margin-bottom: 5px;">
-            <h:graphicImage library="senac" name="images/logo_texto_2_redimensionado_1.png" />
-<!--            <p:linkButton href="oauth2/authorization/google" icon="pi pi-google" value="Login usando Google" />-->
-
-
-                        <a href="oauth2/authorization/google" class="aw-toggle  js-toggle">
-                            <i class="pi pi-google" style="color: white; size: 20px;"></i>
-                        </a>
-
-<!--                        <a href="oauth2/authorization/google" class="aw-toggle  js-toggle">
-                            <i class="pi pi-google" style="color: white; size: 20px;"></i>
-                        </a>-->
-
-
-            <!--            para colocar o login-->
-
-<!--                        <a href="#" class="aw-toggle js-toggle" ><i class="fa fa-bars"></i></a>-->
-
-<!--            teste, mas ficou na direita, deveria ficar na esquerda-->
-<!--            <a href="#" class="aw-toggle  js-toggle>
-                    <h:outputLink value="login"> Entrar no sistema </h:outputLink>
-            </a>-->
-
-
-            <!--            <a href="#" class="aw-toggle  js-toggle">-->
-                         
-            <!--            </a>-->
-
-            <!--            <a href="#" class="aw-toggle  js-toggle">
-                            <i class="pi pi-chevron-down" style="color: white; size: 20px;"></i>
-                        </a>-->
-
-            <!--            <a href="#" class="aw-toggle js-toggle" ><i class="fa fa-bars"></i></a>-->
-
-            <!--            <a href="#" class="aw-toggle  js-toggle">
-                            <i class="pi pi-align-justify" style="color: white; size: 20px"> </i>
-                        </a>-->
-
-            <!--            <a href="#" class="aw-toggle  js-toggle">
-                            <i class="pi pi-home" style="color: white; size: 20px" />
-                                            <i class="fa  fa-bars"></i>           
-                        </a>
-                        <a href="#" class="aw-toggle  js-toggle">
-                            <i class="pi pi-info-circle" style="color: white; size: 20px" />
-                        </a>-->
-
-            <!--            <a href="#" class="aw-toggle  js-toggle">
-                        <h:form id="menuForm">
-                                <p:menubar style="background-color: #84509c; color: white; margin-right:10px; border: none">
-                                    <p:submenu label="Entrar " style="background-color: white; border-radius: 10%" >
-                                        <p:menuitem value="Login" url="#" icon="pi pi-fw pi-sign-in" />
-                                        <p:menuitem value="Logout" icon="pi pi-fw pi-sign-in" 
-                                                    ajax="false" process="@all" action="#"/>
-                                        <p:menuitem rendered="#" url="#" value="Perfil" icon="pi pi-fw pi-sign-in"  
-                                                    actionListener="#"  ajax="false" process="@all" />
-            
-                                    </p:submenu>
-                                </p:menubar>
-                        </h:form>
-                         </a>-->
-            <!-- acrescentei a partir daqui teste - base site quiz
-            <div id="container_menu_header">
-
-                <a href="#">
-                    <i class="pi pi-home" style="color: white; size: 20px" />
-                </a>
-                <a href="#"> 
-                    <i class="pi pi-info-circle" style="color: white; size: 20px" />
-                </a>
-
-                <h:form id="menuForm">
-                    <p:menubar style="background-color: #84509c; color: white; margin-right:10px; border: none">
-                        <p:submenu label="Entrar " style="background-color: white; border-radius: 10%" >
-                            <p:menuitem value="Login" outcome="/login" icon="pi pi-fw pi-sign-in" />
-                            <p:menuitem value="Logout" icon="pi pi-fw pi-sign-in" 
-                                        ajax="false" process="@all" action="#"/>
-                            <p:menuitem rendered="#" outcome="/Perfil/perfil" value="Perfil" icon="pi pi-fw pi-sign-in"  
-                                        actionListener="#"  ajax="false" process="@all" />
-
-                        </p:submenu>
-                    </p:menubar>
-                </h:form>
-            </div>
-            término teste -->
+        <header class="aw-topbar" style="padding: 10px 10px 0 0;">
+            <span style="float: left">
+                <h:graphicImage library="senac" name="images/logo_texto_2_redimensionado_1.png" />
+            </span>
+            <span style="float: right">
+                <p:linkButton href="oauth2/authorization/google" icon="pi pi-google" value="Login Google" />
+            </span>>
 
         </header>
-
-        <!--        <aside class="aw-sidebar  js-sidebar">
-                    <ui:include src="menu.xhtml" />
-                </aside>-->
-
-        <!--        <section class="aw-content  js-content">-->
-
-        <!--            <p:messages id="messages" showSummary="true" closable="true">
-                        <p:autoUpdate/>
-                    </p:messages>-->
 
         <ui:insert name="content" />
         <!--        </section>-->

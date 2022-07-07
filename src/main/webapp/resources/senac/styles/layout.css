@@ -31,6 +31,10 @@
     border-right: 1px solid #eaeaea;
 }
 
+.ui-growl {
+    top: 65px;
+}
+
 
 .aw-sidebar.is-toggled {
     margin-left: 0px;
