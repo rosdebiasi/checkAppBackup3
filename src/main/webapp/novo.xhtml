@@ -30,7 +30,7 @@
                         <f:selectItems value="#{inspecaoC.comboEmpreendimentos}"/>
                     </p:selectOneMenu>
 
-                    <h:outputText value="Responsável técnico: #{googleC.nome} "/>
+                    <h:outputText value="Responsável técnico: #{inspecaoC.inspecao.responsavelTecnico} "/>
 
                     <p:accordionPanel value="#{inspecaoC.listaAvaliacoesPorCategoria.keySet()}" var="nomeCategoria">
                         <p:tab title="#{nomeCategoria}">

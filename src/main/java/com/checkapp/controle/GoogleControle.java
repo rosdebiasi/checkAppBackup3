@@ -13,8 +13,6 @@ public class GoogleControle implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-//    @Autowired
-//    private SecurityContextHolder sc;
     private String nome = "sem_usuario";
     private String urlImagem = "sem_imagem";
     private String email = "sem_email";

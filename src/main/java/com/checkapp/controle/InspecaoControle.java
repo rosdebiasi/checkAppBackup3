@@ -65,11 +65,15 @@ public class InspecaoControle implements Serializable {
     @Autowired
     private AvaliacaoRepositorio avaliacaoRepositorio;
     
+    @Autowired
+    private GoogleControle googleControle;
+    
     //para pesquisar no banco antes de carregar a tela- como um construtor de uma classe de Entidade, mas tem em todas as classes
     @PostConstruct
     public void iniciar() {
         aba = 0;
         inspecao = new Inspecao();
+        inspecao.setResponsavelTecnico(googleControle.getNome());
         empreendimento = new Empreendimento();
         modelInspecoes = null;
         carregarComboBoxEmpreendimentos();
