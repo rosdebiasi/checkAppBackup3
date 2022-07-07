@@ -32,9 +32,12 @@
 }
 
 .ui-growl {
-    top: 400px;
+    top: 65px;
 }
 
+.img{
+    border-radius: 50%;
+}
 
 .aw-sidebar.is-toggled {
     margin-left: 0px;
