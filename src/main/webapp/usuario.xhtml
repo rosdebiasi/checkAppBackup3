@@ -8,22 +8,30 @@
     <ui:define name="content">
         <p:panel header="Usuário">
 
-            <p:card style="width: 20em; padding: 12px;">
+            <p:panelGrid columns="2" layout="grid"
+                         columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+                         style="width: 40em; padding: 12px; border: none">
 
-                <f:facet name="header">
-                    <img alt="user header" src="#{googleC.urlImagem}" style="max-width: 12em"/>
-                </f:facet>
+                <p:row style="height: 10em">
+                    <p:column style="width:12em">
+                        <img alt="user header" src="#{googleC.urlImagem}"
+                             style="max-width: 12em; border-radius: 50%; padding: 12px"/>
+                    </p:column>
 
-                <p>
-                    <div><small><h:outputText value="Nome" /></small></div>
-                    <b><h:outputText value="#{googleC.nome}"/></b>
-                </p>
-                <p>
-                    <div><small><h:outputText value="Email" /></small></div>
-                    <b><h:outputText value="#{googleC.email}"/></b>
-                </p>
+                    <p:column style="width:24em">
+                        <p>
+                            <div><small><h:outputText value="Nome" /></small></div>
+                            <b><h:outputText value="#{googleC.nome}"/></b>
+                        </p>
+                        <p>
+                            <div><small><h:outputText value="Email" /></small></div>
+                            <b><h:outputText value="#{googleC.email}"/></b>
+                        </p>
+                    </p:column>
 
-            </p:card>
+                </p:row>
+
+            </p:panelGrid>
 
         </p:panel>
     </ui:define>
