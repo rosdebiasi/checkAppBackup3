@@ -11,19 +11,19 @@
 
             <h:form id="form_pesquisa">
 
-                <p:panelGrid id="panelGG" columns="2" layout="grid" 
+                <p:panelGrid id="panelGG" columns="2" layout="flex" 
                              columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2"
                              contentStyleClass="ui-fluid">
                     <p:outputLabel for="lugar" value="Local:" />
-                    <br/>
+
                     <p:selectOneMenu id="lugar" value="#{relatorioC.pesquisaEmpreendimentoId}"
                                      required="false" filter="true" filterMatchMode="startsWith">
                         <f:selectItem itemLabel="Selecione o empreendimento:" itemValue="-1"/>
                         <f:selectItems value="#{relatorioC.lugares}" var="lugar"
                                        itemLabel="#{lugar.nome}" itemValue="#{lugar.id}" />
                     </p:selectOneMenu>
-                    <br/>
-                    <p:commandButton value="Pesquisar" actionListener="#{relatorioC.pesquisarPorEmpreeendimento()}" update="tabela" style="width: 186px"/>
+
+                    <p:commandButton value="Pesquisar" actionListener="#{relatorioC.pesquisarPorEmpreeendimento()}" update="tabela" />
                 </p:panelGrid>
 
                 <!--                <p:panelGrid id="panelGG3" columns="3" layout="flex" 
@@ -41,12 +41,14 @@
                     <p:outputPanel>
                         <p:outputLabel for="dataI" value="Data Inicial:" />
                         <br/>
+                        <br/>
                         <p:datePicker id="dataI" value="#{relatorioC.pesquisaDataInicial}" 
                                       required="false" showIcon="true" style="width:auto"/>
                     </p:outputPanel>
 
                     <p:outputPanel>
                         <p:outputLabel for="dataF" value="Data Final:" />
+                        <br/>
                         <br/>
                         <p:datePicker id="dataF" value="#{relatorioC.pesquisaDataFinal}" 
                                       required="false" showIcon="true" style="width:auto"/>
