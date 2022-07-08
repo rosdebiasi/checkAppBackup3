@@ -15,17 +15,11 @@
                 <!--aba para cadastrar e alterar-->
                 <p:tab title="Novo">
                     <h:form id="form_novo">
+                        
                         <p:panelGrid columns="4" layout="flex"
                                      columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-10"
                                      contentStyleClass="ui-fluid">
                             <p:outputLabel for="categoria" value="Categoria:" />
-<!--                            <p:selectOneMenu id="categoria" value="#{itemC.categoria.id}" 
-                                             required="true" requiredMessage="Categoria é obrigatório!">
-                                <f:selectItem itemLabel="Escolha um..." itemValue=""/>
-                                <f:selectItem itemLabel="Rampa" itemValue="Rampa"/>
-                                <f:selectItem itemLabel="Escada" itemValue="Escada"/>
-                                <f:selectItem itemLabel="Calçada" itemValue="Calçada"/>
-                            </p:selectOneMenu>-->
                             <p:selectOneMenu id="categoria" value="#{itemC.categoria.id}" 
                                              required="true" requiredMessage="Categoria é obrigatório!"
                                              filter="true" filterMatchMode="startsWith">
@@ -34,10 +28,7 @@
                             </p:selectOneMenu>
                             <p:outputLabel for="nome" value="Descrição:" />
                             <p:inputTextarea  id="nome" value="#{itemC.item.nome}" placeholder="ex: Circulação possui vão de 80 cm."
-                                              required="true" requiredMessage="Descrição é obrigatório!"/>
-
-                            
-
+                                              required="true" requiredMessage="Descrição é obrigatório!"/>                  
                         </p:panelGrid>
                         
                         <p:commandButton value="Salvar" action="#{itemC.salvar()}"  update="@all" />
