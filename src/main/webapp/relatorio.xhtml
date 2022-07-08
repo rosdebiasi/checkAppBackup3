@@ -39,23 +39,25 @@
                              columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2"
                              contentStyleClass="ui-fluid">                 
                     <p:outputPanel>
+                        
                         <p:outputLabel for="dataI" value="Data Inicial:" />
-                        <br/>
-                        <br/>
-                        <p:datePicker id="dataI" value="#{relatorioC.pesquisaDataInicial}" 
-                                      required="false" showIcon="true" style="width:auto"/>
+                        <p>
+                            <p:datePicker id="dataI" value="#{relatorioC.pesquisaDataInicial}" 
+                                          required="false" showIcon="true" style="width:auto"/>
+                        </p>
                     </p:outputPanel>
 
                     <p:outputPanel>
                         <p:outputLabel for="dataF" value="Data Final:" />
-                        <br/>
-                        <br/>
+                        <p> 
                         <p:datePicker id="dataF" value="#{relatorioC.pesquisaDataFinal}" 
-                                      required="false" showIcon="true" style="width:auto"/>
+                                      required="false" showIcon="true" style="width:auto; "/>
+                        </p>
                     </p:outputPanel>
 
                     <p:commandButton value="Pesquisar" actionListener="#{relatorioC.pesquisarPorFaixaDeData()}" update="tabela" style="width: 186px"/>
                 </p:panelGrid>
+
 
                 <p:dataTable id="tabela" var="inspecao" value="${relatorioC.inspecoes}" rows="10"
                              paginator="true" paginatorPosition="bottom" style="text-align: center"
