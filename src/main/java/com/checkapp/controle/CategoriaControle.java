@@ -46,7 +46,7 @@ public class CategoriaControle implements Serializable {
 
     @PostConstruct
     public void iniciar() {
-        modelCategorias = new ListDataModel<>(categoriaRepositorio.findAll());
+//        modelCategorias = new ListDataModel<>(categoriaRepositorio.findAll());
     }
 
     public List<Categoria> pesquisarTodo() {

@@ -43,7 +43,7 @@ public class EmpreendimentoControle implements Serializable {
 
     @PostConstruct
     public void iniciar() {
-        modelLugares = new ListDataModel<>(localRepositorio.findAll());
+//        modelLugares = new ListDataModel<>(localRepositorio.findAll());
     }
 
     public List<Empreendimento> pesquisarTodo() {
