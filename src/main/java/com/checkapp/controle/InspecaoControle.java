@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import javax.faces.model.SelectItem;
 import com.checkapp.dao.EmpreendimentoRepositorio;
 import com.checkapp.entidade.Avaliacao;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Map;
@@ -154,7 +155,8 @@ public class InspecaoControle implements Serializable {
                 }
             }
             
-            Mensagem.mensagemSucesso(inspecao.getNome() + " em " +  inspecao.getDataEhora());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MMMM/yyyy 'às' HH:mm");
+            Mensagem.mensagemSucesso(inspecao.getNome() + " em " +  sdf.format(inspecao.getDataEhora()));
 
             iniciar();
         } catch (Exception e) {
